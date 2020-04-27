@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  webhookZoomtos3:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      FunctionName: webhookZoom-to-s3
+      Description: ''
+      Handler: lambda_function.lambda_handler
+      MemorySize: 128
+      Role: >-
+        arn:aws:iam::062241367565:role/service-role/webhookZoom-to-s3-role-b9io3xtp
+      Runtime: python3.8
+      Timeout: 3
